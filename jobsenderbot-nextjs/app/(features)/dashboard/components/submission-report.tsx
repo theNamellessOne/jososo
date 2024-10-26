@@ -143,7 +143,10 @@ export function SubmissionReport() {
             </TableCell>
             <TableCell>
               {item.pdf_path ? (
-                <a href={item.pdf_path} target="_blank">
+                <a
+                  href={`${process.env.NEXT_PUBLIC_APP_URL}/resume/${item.pdf_path}`}
+                  target="_blank"
+                >
                   <Button variant="link">Resume</Button>
                 </a>
               ) : (
